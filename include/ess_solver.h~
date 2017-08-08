@@ -1,0 +1,15 @@
+namespace ORB_SLAM2
+{
+
+class ess_solver
+{
+public:
+	bool computeFundamentalMatrixBy2Point( Mat *po1, Mat *po2, int *selected, Mat *essdata[10], Mat **R, Mat **S );
+	void computeFundamentalMatrixBy2Point( double r1, double r2, Mat *essdata[10], Mat **R, Mat **S );
+	void computeFundamentalMatrixBy5Point( Mat *po1, Mat *po2, int *selected, Mat *essdata[10], int &nofess );
+	void computeFundamentalMatrixBy5Point( char *name, char *name2  );
+
+	void init_5pt();
+	void exit_5pt();
+};
+}
